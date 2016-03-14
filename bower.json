@@ -1,6 +1,6 @@
 {
-  "name": "animals-app",
-  "version": "0.0.0",
+  "name": "angular-todo-app",
+  "version": "0.0.1",
   "dependencies": {
     "angular": "^1.4.0",
     "bootstrap-sass-official": "^3.2.0",
@@ -8,7 +8,6 @@
     "angular-cookies": "^1.4.0",
     "angular-resource": "^1.4.0",
     "angular-route": "^1.4.0",
-    "angular-sanitize": "^1.4.0",
     "angular-touch": "^1.4.0",
     "angular-ui-sortable": "^0.13.4",
     "jquery-ui": "^1.11.4",

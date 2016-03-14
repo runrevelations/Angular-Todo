@@ -2,19 +2,18 @@
 
 /**
  * @ngdoc overview
- * @name animalsAppApp
+ * @name AngularTodoApp
  * @description
- * # animalsAppApp
+ * # AngularTodoApp
  *
  * Main module of the application.
  */
 angular
-  .module('animalsAppApp', [
+  .module('AngularTodoApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
-    'ngSanitize',
     'ngTouch',
     'ui.sortable',
     'LocalStorageModule'
@@ -28,11 +27,6 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
         controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
       })
       .otherwise({
         redirectTo: '/'

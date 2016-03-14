@@ -2,13 +2,15 @@
 
 /**
  * @ngdoc function
- * @name animalsAppApp.controller:MainCtrl
+ * @name AngularTodoApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the animalsAppApp
+ * Controller of the AngularTodoApp
  */
-angular.module('animalsAppApp')
+angular.module('AngularTodoApp')
   .controller('MainCtrl', function ($scope, localStorageService) {
+    
+    // Get 'todos' model from 'todos list' main html
     var todosInStore = localStorageService.get('todos');
 
     $scope.todos = todosInStore || [];
@@ -16,7 +18,7 @@ angular.module('animalsAppApp')
     $scope.$watch('todos', function() {
     	localStorageService.set('todos', $scope.todos);
     }, true);
-
+    
     $scope.addTodo = function() {
     	$scope.todos.push($scope.todo);
     	$scope.todo = '';

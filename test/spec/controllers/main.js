@@ -2,8 +2,8 @@
 
 describe('Controller: MainCtrl', function () {
 
-  // load the controller's module
-  beforeEach(module('animalsAppApp'));
+  // Load the controller's module
+  beforeEach(module('AngularTodoApp'));
 
   var MainCtrl,
     scope;
@@ -13,13 +13,10 @@ describe('Controller: MainCtrl', function () {
     scope = $rootScope.$new();
     MainCtrl = $controller('MainCtrl', {
       $scope: scope
-      // place here mocked dependencies
+      // Place mocked dependencies here
     });
   }));
 
-  it('should have no items to start', function () {
-    expect(scope.todos.length).toBe(0);
-  });
 
   it('should add items to the list', function() {
     scope.todo = 'Test 1';
@@ -27,7 +24,7 @@ describe('Controller: MainCtrl', function () {
     expect(scope.todos.length).toBe(1);
   });
 
-  it('should then remove an item from the list', function() {
+  it('should remove an item from the list', function() {
     scope.todo = 'Test 1';
     scope.addTodo();
     scope.removeTodo(0);
